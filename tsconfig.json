@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "countdown": [
+        "dist/countdown"
+      ],
+      "countdown/*": [
+        "dist/countdown/*"
+      ]
+    }
   }
 }
