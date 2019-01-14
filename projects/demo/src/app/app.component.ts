@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+
+  countTo = new Date('Jan 5, 2021 15:37:25');
 }
