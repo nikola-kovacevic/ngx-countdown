@@ -1,8 +1,9 @@
 {
   "name": "@nkovacevic/ngx-countdown",
-  "description": "Countdown library for Angular projects",
-  "version": "0.0.1",
+  "description": "Countdown timer for Angular",
+  "version": "1.0.0",
   "author": "Nikola Kovacevic <nikolakovacevic.zg@gmail.com>",
+  "homepage": "https://github.com/nikola-kovacevic/ngx-countdown",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^7.0.0",

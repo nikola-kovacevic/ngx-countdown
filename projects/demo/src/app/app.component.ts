@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo';
+  public endAfter = 20000;
 
-  countTo = new Date('Jan 5, 2021 15:37:25');
+  public start() {
+    console.log(`Countdown ${this.endAfter / 1000}s has started`);
+  }
+
+  public finished() {
+    console.log('Countdown has finished');
+  }
 }

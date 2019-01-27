@@ -1,27 +1,55 @@
-# NgxCountdown
+# NGX Countdown Timer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+NGX Countdown Timer is a simple Angular library that takes time (in ms) and counts down for that amount, notifying you once it started and finished.
 
-## Development server
+## USAGE
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can see the example in demo folder of this repository!
 
-## Code scaffolding
+How to use this library:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+npm i @nkovacevic/ngx-countdown
+```
 
-## Build
+```typescript
+export class DemoComponent {
+  public endAfter = 20000;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  public start() {
+    console.log(`Countdown ${this.endAfter / 1000}s has started!`);
+  }
 
-## Running unit tests
+  public finished() {
+    console.log('Countdown has finished!');
+  }
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<ngx-countdown [endAfter]="endAfter" (start)="start()" (finished)="finished()"></ngx-countdown>
+```
 
-## Running end-to-end tests
+## OPTIONS
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```typescript
+@Input() interval = 1000; // countdown interval in ms, defaults to 1 second
+@Input() padNumbers = true; // prefix single digit numbers with leading 0
+@Input() endAfter: number; // end after in ms
 
-## Further help
+@Output() finished: EventEmitter < number >; // event emitter after countdown has reached zero
+@Output() start: EventEmitter < void >; // event emitter when countdown has started
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## LICENSE
+
+MIT License [LICENSE][license]
+
+## AUTHOR
+
+Nikola Kovacevic
+
+Created on January 2019
+
+[//]: #
+[license]: https://github.com/nikola-kovacevic/ngx-countdown/blob/master/LICENSE

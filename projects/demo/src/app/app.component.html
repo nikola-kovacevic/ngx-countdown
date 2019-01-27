@@ -1,6 +1,3 @@
-<div style="text-align:center">
-  <ngx-countdown [countTo]="countTo"></ngx-countdown>
+<div class="container">
+  <ngx-countdown [endAfter]="endAfter" (start)="start()" (finished)="finished()"></ngx-countdown>
 </div>
-
-
-

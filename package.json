@@ -15,7 +15,7 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "package": "npm run build-library && npm run copy-files && npm run npm-pack",
     "test": "ng test demo",
-    "lint": "ng lint",
+    "lint": "tslint --project tsconfig.json --config tslint.json './projects/countdown/**/*.ts'",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -29,7 +29,7 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
-    "@nkovacevic/ngx-countdown": "file:dist/countdown/nkovacevic-ngx-countdown-0.0.1.tgz",
+    "@nkovacevic/ngx-countdown": "file:dist/countdown/nkovacevic-ngx-countdown-1.0.0.tgz",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
@@ -57,6 +57,7 @@
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
+    "tslint-angular": "^1.1.2",
     "typescript": "~3.1.1"
   }
 }
